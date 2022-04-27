@@ -37,7 +37,7 @@ window.onload = () => {
     button.onclick = () => {
         textBox.setLabel('Novo valor da label TextBox!!!');
         maskBox.setLabel('Novo valor da label MaskBox!!!');
-        comboBox.setLabel('Novo valor da label ComboBox!!!')
+        comboBox.setLabel('Novo valor da label ComboBox!!!');
         textArea.setLabel('Novo valor da label TextArea!!!');
     }
     button2.onclick = () => {
