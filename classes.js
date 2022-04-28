@@ -1,4 +1,5 @@
 var id = 0;
+var grupoId = 0;
 
 class ElementoBase {
     constructor(model){
@@ -7,6 +8,7 @@ class ElementoBase {
     model = null;
     #fieldModel = '';
 
+    containerNav = document.createElement('div')
     containerInput = document.createElement('div')
     containerLabel = document.createElement('div')
     container = document.createElement('div')
@@ -23,14 +25,23 @@ class ElementoBase {
         return label;
     })()
 
+    navBar = (() => {
+        const nav = document.createElement('nav')
+        return nav;
+    })()
+
     /**
      * @returns {HTMLElement}
      */
     render(){
+       
         this.containerLabel.appendChild(this.label);
         this.containerInput.appendChild(this.input);
+        this.containerNav.appendChild(this.navBar);
+        
         this.container.appendChild(this.containerLabel);
         this.container.appendChild(this.containerInput);
+        this.container.appendChild(this.containerNav);
         return this.container;
     }
 
@@ -136,6 +147,46 @@ class TextArea extends ElementoBase{
     })()
 }
 
+class NavBar extends ElementoBase{
+    #navBarId = '';
+    navBar = (() => {
+        const navElem = document.createElement("nav");
+        navElem.id = 'navId';
+
+        return navElem;
+    })()
+
+    grupoNavBar(nome){
+        debugger;
+        const header = document.createElement("header");
+        header.classList = 'header';
+        header.innerText = nome;
+
+        const navList = document.createElement("ul");
+        navList.id = `grupoId${grupoId++}`;
+        this.#navBarId = navList.id;
+        navList.classList = 'ul';
+
+        navList.append(header);
+        const navElem = document.getElementById("navId");
+        navElem.appendChild(navList);
+    }
+
+    itemNavBar(href, text){
+        const navItem = document.createElement("li");
+        navItem.classList = 'li';
+        const navLink = document.createElement("a");
+        navLink.classList = 'a';
+        
+        navLink.href = href;
+        navLink.innerHTML = text;
+        
+        navItem.appendChild(navLink);
+        const navList = document.getElementById(this.#navBarId);
+        navList.appendChild(navItem);
+    }
+}
+
 const _append = HTMLElement.prototype.append;
 
 HTMLElement.prototype.append = function() {
@@ -153,4 +204,4 @@ HTMLElement.prototype.append = function() {
     return this;
 };
 
-export {TextBox, MaskBox, ComboBox, TextArea};
+export {TextBox, MaskBox, ComboBox, TextArea, NavBar};

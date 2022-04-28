@@ -1,25 +1,32 @@
-import {TextBox, MaskBox, ComboBox, TextArea} from "./classes.js";
+import {TextBox, MaskBox, ComboBox, TextArea, NavBar} from "./classes.js";
 // import styles from './styles.css' assert { type: "css" };
 //         document.adoptedStyleSheets = [styles];
-debugger;
 
 window.onload = () => {
+    debugger;
     const model = {
         nome: '',
         quantidade: 0,
         cidadeId: 0,
         descricao: ''
     }
+    const navBar = new NavBar();
     const textBox = new TextBox(model);
     const maskBox = new MaskBox(model);
     const comboBox = new ComboBox(model);
     const textArea = new TextArea(model);
     document.getElementById('container')
+        .append(navBar)
         .append(textBox)
         .append(maskBox)
         .append(comboBox)
         .append(textArea);
 
+    navBar.grupoNavBar('Cadastro');
+    navBar.itemNavBar('', 'Novo')
+    navBar.itemNavBar('', 'Alterar');
+    navBar.grupoNavBar('Relatórios');
+    navBar.itemNavBar('', 'Cadastros Anual');
     textBox.setFieldModel('nome').setLabel('TextBox');
     maskBox.setFieldModel('quantidade').setLabel('MaskBox');
 
