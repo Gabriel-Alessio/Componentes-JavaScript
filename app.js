@@ -25,6 +25,7 @@ window.onload = () => {
     navBar.grupoNavBar('Cadastro');
     navBar.itemNavBar('', 'Novo')
     navBar.itemNavBar('', 'Alterar');
+    navBar.itemNavBar('', 'Excluir');
     navBar.grupoNavBar('Relatórios');
     navBar.itemNavBar('', 'Cadastros Anual');
     textBox.setFieldModel('nome').setLabel('TextBox');
