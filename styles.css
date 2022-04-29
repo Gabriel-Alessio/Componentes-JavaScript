@@ -1,8 +1,8 @@
 :root {
-    --font-family-padrao: Arial, Helvetica, sans-serif;
-    --font-size-padrao: 15px;
-    --background-color-padrao:aliceblue;
-    --width-padrao: 164px;
+  --font-family-padrao: Arial, Helvetica, sans-serif;
+  --font-size-padrao: 15px;
+  --background-color-padrao:aliceblue;
+  --width-padrao: 164px;
 }
 
 body {
@@ -29,84 +29,84 @@ h1{
 }
 
 .label {
-    font-family: var(--font-family-padrao);
-    font-size: var(--font-size-padrao);
+  font-family: var(--font-family-padrao);
+  font-size: var(--font-size-padrao);
 }
 
 .textBox{
-    font-family: var(--font-family-padrao);
-    font-size: var(--font-size-padrao);
-    background-color: var(--background-color-padrao);
-    width: var(--width-padrao);
+  font-family: var(--font-family-padrao);
+  font-size: var(--font-size-padrao);
+  background-color: var(--background-color-padrao);
+  width: var(--width-padrao);
 }
 
 .maskBox{
-    font-family: var(--font-family-padrao);
-    font-size: var(--font-size-padrao);
-    background-color: var(--background-color-padrao);
-    width: var(--width-padrao);
+  font-family: var(--font-family-padrao);
+  font-size: var(--font-size-padrao);
+  background-color: var(--background-color-padrao);
+  width: var(--width-padrao);
 }
 
 .comboBox{
-    font-family: var(--font-family-padrao);
-    font-size: var(--font-size-padrao);
-    background-color: var(--background-color-padrao);
-    width: var(--width-padrao);
+  font-family: var(--font-family-padrao);
+  font-size: var(--font-size-padrao);
+  background-color: var(--background-color-padrao);
+  width: var(--width-padrao);
 }
 
 .textArea{
-    font-family: var(--font-family-padrao);
-    font-size: var(--font-size-padrao);
-    background-color: var(--background-color-padrao);
-    width: var(--width-padrao);
-    resize: none;
-    height: 100px;
+  font-family: var(--font-family-padrao);
+  font-size: var(--font-size-padrao);
+  background-color: var(--background-color-padrao);
+  width: var(--width-padrao);
+  resize: none;
+  height: 100px;
 }
 
 .button {
-    display: inline-block;
-    padding: 0.65em 0.98em;
-    border: 3px solid #000000;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 0.12em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    color: red;
-    text-align: center;
-    transition: all 0.2s;
-    animation: bn13bouncy 5s infinite linear;
-    position: relative;
+  display: inline-block;
+  padding: 0.65em 0.98em;
+  border: 3px solid #000000;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: red;
+  text-align: center;
+  transition: all 0.2s;
+  animation: bn13bouncy 5s infinite linear;
+  position: relative;
 }
-  
+
 .button:hover {
-    background-color: red;
-    color: #000000;
+  background-color: red;
+  color: #000000;
 }
-  
+
 @keyframes bn13bouncy {
-    0% {
-      top: 0em;
-    }
-    40% {
-      top: 0em;
-    }
-    43% {
-      top: -0.9em;
-    }
-    46% {
-      top: 0em;
-    }
-    48% {
-      top: -0.4em;
-    }   
-    50% {
-      top: 0em;
-    }
-    100% {
-      top: 0em;
-    }
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }   
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
 }
 
 
@@ -121,27 +121,24 @@ h1{
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 }
 
-#navId .ul {
+.ul {
   height: 88%;
   padding: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  cursor: pointer;
-  
+
 }
 
-#navId .li {
+.li {
   color: #4d4e53;
-  border-top: 1px solid;
-  list-style: none;
+  border-top: 2px solid;
   position: relative;
   width: 100%;
 
 }
 
-#navId .a {
+.a {
   display: block;
-  padding: 10px 30px;
   color: #4d4e53;
   text-decoration: none;
   cursor: pointer;
@@ -152,5 +149,5 @@ h1{
   margin: 10px;
   text-align: center;
   font-size: 1.8em;
-  font-weight: thin;
+  cursor: pointer;
 }

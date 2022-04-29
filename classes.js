@@ -1,5 +1,6 @@
 var id = 0;
 var grupoId = 0;
+var navUl = [];
 
 class ElementoBase {
     constructor(model){
@@ -167,9 +168,25 @@ class NavBar extends ElementoBase{
         this.#navBarId = navList.id;
         navList.classList = 'ul';
 
-        navList.append(header);
+        header.addEventListener("click", () => {
+            if(navList.style.display != 'block'){
+                for (let index = 0; index < navUl.length; index++) {
+                    if(navList.id != navUl[index].id && navUl[index].style.display == 'block'){
+                        navUl[index].style.display = 'none'
+                    }
+                    else {
+                        navUl[index].style.display = 'block'
+                    }
+                }
+            }
+        })
+
+        header.append(navList);
         const navElem = document.getElementById("navId");
-        navElem.appendChild(navList);
+        navElem.appendChild(header);
+
+        navUl = [].slice.call(document.querySelectorAll('ul'));
+        navUl.map((x, index) => { index == 0? x.style.display = 'block': x.style.display = 'none'})
     }
 
     itemNavBar(href, text){
