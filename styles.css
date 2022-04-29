@@ -116,7 +116,7 @@ h1{
   top: 0px;
   left: 1450px;
   width: 0px;
-  height: auto;
+  align-items: center;
   border-left: solid;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 }
@@ -132,6 +132,7 @@ h1{
 .li {
   color: #4d4e53;
   border-top: 2px solid;
+  list-style: none;
   position: relative;
   width: 100%;
 
@@ -141,6 +142,9 @@ h1{
   display: block;
   color: #4d4e53;
   text-decoration: none;
+  font-size: 20px;
+  border-style: solid;
+  text-align: -webkit-left;
   cursor: pointer;
 }
 
@@ -150,4 +154,5 @@ h1{
   text-align: center;
   font-size: 1.8em;
   cursor: pointer;
+  border-style: solid;
 }

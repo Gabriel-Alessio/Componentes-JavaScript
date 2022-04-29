@@ -186,7 +186,7 @@ class NavBar extends ElementoBase{
         navElem.appendChild(header);
 
         navUl = [].slice.call(document.querySelectorAll('ul'));
-        navUl.map((x, index) => { index == 0? x.style.display = 'block': x.style.display = 'none'})
+        navUl.map((x, index) => { index == 0 ? x.style.display = 'block': x.style.display = 'none'})
     }
 
     itemNavBar(href, text){
