@@ -166,27 +166,27 @@ class NavBar extends ElementoBase{
         const navList = document.createElement("ul");
         navList.id = `grupoId${grupoId++}`;
         this.#navBarId = navList.id;
-        navList.classList = 'ul';
+        navList.classList = 'grupoNav';
 
         header.addEventListener("click", () => {
             if(navList.style.display != 'block'){
                 for (let index = 0; index < navUl.length; index++) {
                     if(navList.id != navUl[index].id && navUl[index].style.display == 'block'){
-                        navUl[index].style.display = 'none'
+                        navUl[index].style.display = 'none';
                     }
                     else {
-                        navUl[index].style.display = 'block'
+                        navUl[index].style.display = 'block';
                     }
                 }
             }
-        })
+        });
 
         header.append(navList);
         const navElem = document.getElementById("navId");
         navElem.appendChild(header);
 
-        navUl = [].slice.call(document.querySelectorAll('ul'));
-        navUl.map((x, index) => { index == 0 ? x.style.display = 'block': x.style.display = 'none'})
+        navUl = [].slice.call(document.getElementsByClassName('grupoNav'));
+        navUl.map((x, index) => { index == 0 ? x.style.display = 'block': x.style.display = 'none'});
     }
 
     itemNavBar(href, text){
