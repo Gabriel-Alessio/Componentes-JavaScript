@@ -1,7 +1,7 @@
 :root {
   --font-family-padrao: Arial, Helvetica, sans-serif;
   --font-size-padrao: 15px;
-  --background-color-padrao:aliceblue;
+  --background-color-padrao:#99aab5;
   --width-padrao: 164px;
   --color-padrao: white;
 }
@@ -40,6 +40,7 @@ h1{
   font-family: var(--font-family-padrao);
   font-size: var(--font-size-padrao);
   background-color: var(--background-color-padrao);
+  color: var(--color-padrao);
   width: var(--width-padrao);
 }
 
@@ -48,6 +49,7 @@ h1{
   font-size: var(--font-size-padrao);
   background-color: var(--background-color-padrao);
   width: var(--width-padrao);
+  color: var(--color-padrao);
 }
 
 .comboBox{
@@ -55,12 +57,14 @@ h1{
   font-size: var(--font-size-padrao);
   background-color: var(--background-color-padrao);
   width: var(--width-padrao);
+  color: var(--color-padrao);
 }
 
 .textArea{
   font-family: var(--font-family-padrao);
   font-size: var(--font-size-padrao);
   background-color: var(--background-color-padrao);
+  color: var(--color-padrao);
   width: var(--width-padrao);
   resize: none;
   height: 100px;
@@ -76,16 +80,12 @@ h1{
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  color: red;
+  color: var(--color-padrao);
+  background-color: var(--background-color-padrao);
   text-align: center;
   transition: all 0.2s;
   animation: bn13bouncy 5s infinite linear;
   position: relative;
-}
-
-.button:hover {
-  background-color: red;
-  color: #000000;
 }
 
 @keyframes bn13bouncy {
@@ -120,9 +120,7 @@ h1{
   left: 1450px;
   width: 0px;
   align-items: center;
-  border-left: solid;
-  box-shadow: 0 2px 0 rgba(44, 47, 51, 0.4);
-  color: #23272a;
+  background-color: #23272a;
 }
 
 .grupoNav {
@@ -140,7 +138,7 @@ h1{
   position: relative;
   width: 100%;
   color: #23272a;
-
+  background-color: #2c2f33;
 }
 
 .a {
@@ -148,9 +146,10 @@ h1{
   color: var(--color-padrao);
   text-decoration: none;
   font-size: 20px;
-  border-style: solid;
   text-align: -webkit-left;
   cursor: pointer;
+  border: solid;
+  border-color: #2c2f33;
 }
 
 .header {
@@ -162,4 +161,5 @@ h1{
   border-style: solid;
   border-color: #23272a;
   color: var(--color-padrao);
+  border-color: #2c2f33;
 }
