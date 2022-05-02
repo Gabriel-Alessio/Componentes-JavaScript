@@ -5,9 +5,6 @@
   --width-padrao: 164px;
 }
 
-body {
-  background-color: paleturquoise;
-}
 h1{
   display: flex;
   flex-direction: column;

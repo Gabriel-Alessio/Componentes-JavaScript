@@ -3,7 +3,6 @@ import {TextBox, MaskBox, ComboBox, TextArea, NavBar} from "./classes.js";
 //         document.adoptedStyleSheets = [styles];
 
 window.onload = () => {
-    debugger;
     const model = {
         nome: '',
         quantidade: 0,

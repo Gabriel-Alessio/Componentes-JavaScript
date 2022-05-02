@@ -9,10 +9,10 @@ class ElementoBase {
     model = null;
     #fieldModel = '';
 
-    containerNav = document.createElement('div')
     containerInput = document.createElement('div')
     containerLabel = document.createElement('div')
     container = document.createElement('div')
+    
     input = (() => {
         const text = document.createElement('input');
         text.id = `id${id++}`
@@ -26,10 +26,6 @@ class ElementoBase {
         return label;
     })()
 
-    navBar = (() => {
-        const nav = document.createElement('nav')
-        return nav;
-    })()
 
     /**
      * @returns {HTMLElement}
@@ -38,11 +34,9 @@ class ElementoBase {
        
         this.containerLabel.appendChild(this.label);
         this.containerInput.appendChild(this.input);
-        this.containerNav.appendChild(this.navBar);
         
         this.container.appendChild(this.containerLabel);
         this.container.appendChild(this.containerInput);
-        this.container.appendChild(this.containerNav);
         return this.container;
     }
 
@@ -57,6 +51,25 @@ class ElementoBase {
     }
     getFieldModel(){
         return this.#fieldModel;
+    }
+}
+
+class ElementoNavBar extends ElementoBase{
+    containerNav = document.createElement('div')
+    container = document.createElement('div')
+
+    navBar = (() => {
+        const nav = document.createElement('nav')
+        return nav;
+    })()
+
+    /**
+     * @returns {HTMLElement}
+     */
+     render(){
+        this.containerNav.appendChild(this.navBar);
+        this.container.appendChild(this.containerNav);
+        return this.container;
     }
 }
 
@@ -148,8 +161,8 @@ class TextArea extends ElementoBase{
     })()
 }
 
-class NavBar extends ElementoBase{
-    #navBarId = '';
+class NavBar extends ElementoNavBar{
+    #navBarId = ''; 
     navBar = (() => {
         const navElem = document.createElement("nav");
         navElem.id = 'navId';
@@ -158,7 +171,6 @@ class NavBar extends ElementoBase{
     })()
 
     grupoNavBar(nome){
-        debugger;
         const header = document.createElement("header");
         header.classList = 'header';
         header.innerText = nome;
@@ -183,7 +195,7 @@ class NavBar extends ElementoBase{
 
         header.append(navList);
         const navElem = document.getElementById("navId");
-        navElem.appendChild(header);
+        navElem.append(header);
 
         navUl = [].slice.call(document.getElementsByClassName('grupoNav'));
         navUl.map((x, index) => { index == 0 ? x.style.display = 'block': x.style.display = 'none'});
