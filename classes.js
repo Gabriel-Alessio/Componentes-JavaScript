@@ -39,16 +39,25 @@ class ElementoBase {
         this.container.appendChild(this.containerInput);
         return this.container;
     }
-
+    /**
+     * @param {string} nome 
+     * @returns {this}
+     */
     setLabel(nome){
         this.label.innerText = nome;
         return this;
     }
-
+    /**
+     * @param {string} field 
+     * @returns {this} 
+     */
     setFieldModel(field){
         this.#fieldModel = field;
         return this;
     }
+    /**
+     * @returns {string}
+     */
     getFieldModel(){
         return this.#fieldModel;
     }
@@ -117,18 +126,32 @@ class ComboBox extends ElementoBase{
     #fieldValue = '';
     #fieldText = '';
     
+    /**
+     * 
+     * @param {string} value 
+     * @returns {this}
+     */
     setFieldValue(value) {
         this.#fieldValue = value;
         return this;
     }
+    /**
+     * @returns {string}
+     */
     getFieldValue(){
         return this.#fieldValue;
     }
-
+    /**
+     * @param {string} text
+     * @returns {this} 
+     */
     setFieldText(text) {
         this.#fieldText = text;
         return this;
     }
+    /**
+     * @returns {string}
+     */
     getFieldText(){
         return this.#fieldText;
     }
